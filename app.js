@@ -1,21 +1,30 @@
-// const banner = document.querySelector('#page-banner');
-// console.log("banner node type",banner.nodeType);
-// console.log("banner node name",banner.nodeName);
-// const clonedBanner = banner.cloneNode(true);
-// console.log(clonedBanner);
+// var h2 = document.querySelector('#book-list h2')
+// h2.addEventListener('click',function(e){
+//     console.log(e.target);
+//     console.log(e);
+// })
 
-const bookList = document.querySelector('#book-list');
-console.log('The parent node is', bookList.parentNode);
-console.log('The Parent element is',bookList.parentElement);
-console.log('The Parent element is',bookList.parentElement.parentElement);
-console.log('the children is',bookList.children);
+// Event 
+// var btns = document.querySelectorAll('#book-list .delete');
+// Array.from(btns).forEach(function(btn){
+//     btn.addEventListener('click',function(e){
+//         const li = e.target.parentElement;
+//         li.parentNode.removeChild(li)
+//     });
+// });
 
-//sibling
-console.log('book-list next  sibling',bookList.nextSibling);
-console.log('book-list next element sibling',bookList.nextElementSibling);
+const link = document.querySelector('#page-banner a');
+link.addEventListener('click',function(e){
+    e.preventDefault();
+    console.log('Navigation to',e.target.textContent,'was prevented');
+});
 
-console.log('book-list previous  sibling',bookList.previousSibling);
-console.log('book-list previous element sibling',bookList.previousElementSibling);
+///Event Bubling efficient way...
 
-///
-bookList.previousElementSibling.querySelector('p').innerHTML += '<br/> cool way to add new text';
+const list = document.querySelector('#book-list ul');
+list.addEventListener('click',function(e){
+    if(e.target.className == 'delete') {
+        const li = e.target.parentElement;
+        list.removeChild(li);
+    }
+});
