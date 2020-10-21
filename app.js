@@ -37,4 +37,16 @@ li.appendChild(bookName);
 li.appendChild(deleteBtn);
 list.appendChild(li);
 
+
+
 });
+
+//hide books
+const hidebox = document.querySelector('#hide');
+hidebox.addEventListener('change',function(e){
+    if(hidebox.checked) {
+        list.style.display = "none";
+    }else {
+        list.style.display = "initial";
+    }
+ });
