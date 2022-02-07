@@ -1,2 +1,2 @@
-# JavaScript-DOM
-<h6>Checkout branch</h6>
+# Modern JavaScript 
+<h2>Checkout branch</h6>
