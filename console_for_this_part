@@ -1,7 +1,0 @@
-//if you want to find all the html document
--->document
-//if you want to find particular id's element
--->document.getElementById('page-banner')
-//if you want find id by veriable
---> var banner = document.getElementById('page-banner')
--->banner
