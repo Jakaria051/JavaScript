@@ -1,31 +1,30 @@
-//ES6 Arrow fat function
+var numbers = [1,2,3,4,5,6];
 
-// function numbers(a,b) {
-//     return a+b;
-// }
+//Array.prototype.map()
 
-// let numbers = (a,b) => a+b;
+var result = numbers.map((num) => {
+    return 2* num;
+});
+console.log(result);
+//Array.prototype.reduce()
 
-// console.log(numbers(10,20));
 
-// var javascript = {
-//     name: "javascript",
-//     libraries: ["React","Vue"],
-//     printLibraries: function() {
-//         this.libraries.forEach((value)=>
-//          console.log(`${this.name} loves ${value}`));
-//     }
-// }
+var sum = numbers.reduce((previousValue,currentValue) => {
+    return previousValue + currentValue;
+},0);
 
-// javascript.printLibraries();
+console.log(sum);
 
-const searchInput = document.querySelector(".search");
-const result = document.querySelector(".result");
-const thanks = document.querySelector(".thanks");
+//Object
+var myObj = {
+    name: "Javascript",
+    founder: "Brenden Eich",
+    estd: "1995",
+    ranking: 1
+};
 
-function show() {
-    result.innerHTML = this.value;
-    setTimeout(()=> thanks.innerHTML = `You have type ${this.value}`,1000)
-}
+var keys = Object.keys(myObj);
+var values = Object.values(myObj);
+var entries = Object.entries(myObj);
 
-searchInput.addEventListener("keyup",show);
+console.log(entries);
